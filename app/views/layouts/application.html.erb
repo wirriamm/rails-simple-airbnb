@@ -13,7 +13,12 @@
   </head>
 
   <body>
-    <div class="container">
+    <nav class="navbar navbar-light bg-light p-3 sticky-top">
+      <%= link_to "Simple AirBnb", flats_path, class: 'h4 m-0' %>
+      <%= link_to "Add flat", new_flat_path, class: 'btn btn-primary h1 m-0' %>
+    </nav>
+
+    <div class="container my-3">
       <%= yield %>
     </div>
   </body>
