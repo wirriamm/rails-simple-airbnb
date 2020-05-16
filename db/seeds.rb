@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Seeding flats'
-5.times do |i|
+10.times do |i|
   puts "Seeding Flat number #{i}"
   Flat.create!(
-    name: 'Light & Spacious Garden Flat London',
-    address: '10 Clifton Gardens London W9 1DT',
-    description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-    price_per_night: 75,
-    number_of_guests: 3
+    name: "#{Faker::Games::Pokemon.name}'s Crib",
+    address: Faker::Address.street_address,
+    description: Faker::Lorem.paragraph,
+    price_per_night: rand(30..100),
+    number_of_guests: rand(1..6)
   )
 end
 puts 'Done seeding'
